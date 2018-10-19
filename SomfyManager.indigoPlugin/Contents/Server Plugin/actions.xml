@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Actions>
+	<Action id="mylink.move.up.1" deviceFilter="self.motor">
+		<Name>MyLink: Move Up</Name>
+		<CallbackMethod>myLinkCmdSingle</CallbackMethod>
+	</Action>
+	<Action id="mylink.move.down.1" deviceFilter="self.motor">
+		<Name>MyLink: Move Down</Name>
+		<CallbackMethod>myLinkCmdSingle</CallbackMethod>
+	</Action>
+	
+	<Action id="sep1" />
+
+	<Action id="mylink.move.up.2" deviceFilter="self.motor">
+		<Name>MyLink: Retract</Name>
+		<CallbackMethod>myLinkCmdSingle</CallbackMethod>
+	</Action>
+	<Action id="mylink.move.down.2" deviceFilter="self.motor">
+		<Name>MyLink: Extend</Name>
+		<CallbackMethod>myLinkCmdSingle</CallbackMethod>
+	</Action>
+	
+	<Action id="sep2" />
+
+	<Action id="mylink.move.stop" deviceFilter="self.motor">
+		<Name>MyLink: Stop</Name>
+		<CallbackMethod>myLinkCmdSingle</CallbackMethod>
+	</Action>
+	
+	<Action id="sep3" />
+
+	<Action id="read">
+		<Name>MyLink: Read</Name>
+		<CallbackMethod>myLinkRead</CallbackMethod>
+	</Action>
+
+</Actions>

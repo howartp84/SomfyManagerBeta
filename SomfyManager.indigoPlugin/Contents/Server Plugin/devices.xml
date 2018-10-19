@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<Devices>
+	<!-- This custom device illustrates how a plugin can update custom device
+	states which can be used in Device State Changed triggers, conditionals,
+	and inspected on Control Pages. The python runConcurrentThread() method
+	will update the states every second.
+	-->
+	<Device type="custom" id="mylink">
+		<Name>Somfy MyLink</Name>
+		<ConfigUI>
+			<Field id="devIP" type="textfield">
+				<Label>MyLink IP:</Label>
+			</Field>
+			<Field id="devPort" type="textfield" defaultValue="44100">
+				<Label>MyLink Port:</Label>
+			</Field>
+			<Field id="devAuth" type="textfield">
+				<Label>MyLink Password:</Label>
+			</Field>
+			<Field id="connTimeout" type="textfield" defaultValue="5">
+				<Label>Connection timeout:</Label>
+			</Field>
+			<!--<Field id="cmdDelay" type="textfield" defaultValue="2">
+				<Label>Command delay:</Label>
+			</Field>-->
+		</ConfigUI>
+		<States>
+			<State id="devIP">
+				<ValueType>String</ValueType>
+				<TriggerLabel>IP Address</TriggerLabel>
+				<ControlPageLabel>IP Address</ControlPageLabel>
+			</State>
+		</States>
+		<UiDisplayStateId>devIP</UiDisplayStateId>
+	</Device>
+
+
+	<Device type="custom" id="motor">
+		<Name>Somfy Motor</Name>
+		<ConfigUI>
+			<Field id="devAddr" type="textfield">
+				<Label>Somfy Address:</Label>
+			</Field>
+			<Field id="devCh" type="textfield" defaultValue="1">
+				<Label>Somfy Channel (1-16 or * for all):</Label>
+			</Field>
+		</ConfigUI>
+				<States>
+			<State id="devAddrCh">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Address</TriggerLabel>
+				<ControlPageLabel>Address</ControlPageLabel>
+			</State>
+		</States>
+		<UiDisplayStateId>devAddrCh</UiDisplayStateId>
+	</Device>
+
+</Devices>
